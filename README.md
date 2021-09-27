@@ -1,7 +1,7 @@
 # SpatioTemporal-AutoEncoder
 Pytorch implementation of SpatioTemporal AutoEncoder
 
-Paper: **Abnormal Event Detection in Videos using Spatiotemporal Autoencoder**
+Paper: **Abnormal Event Detection in Videos using Spatiotemporal Autoencoder**(https://arxiv.org/pdf/1701.01546.pdf)
 
 ![image](https://user-images.githubusercontent.com/76432990/134844516-725fdaaa-983c-4b72-ae2a-cb478fac67ba.png)
 

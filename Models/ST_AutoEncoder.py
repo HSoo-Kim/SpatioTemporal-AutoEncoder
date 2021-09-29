@@ -32,8 +32,7 @@ class ST_AutoEncoder(nn.Module):
         )
         
     def forward(self, x):
-        # x : (N, T, C, H, W) / T : sequence length(or D)
-        x = x.permute(0,2,1,3,4)  # (N, T, C, H, W) -> (N, C, T, H, W) 
+        # x : (N, C, T, H, W) / T : sequence length(or D)        
         h = self.spatial_encoder(x)
         
         h = h.permute(0,2,1,3,4)  # (N, C, T, H, W) -> (N, T, C, H, W) 
@@ -41,7 +40,7 @@ class ST_AutoEncoder(nn.Module):
         
         h_hat = h_hat.permute(0,2,1,3,4)  # (N, T, C, H, W) -> (N, C, T, H, W) 
         output = self.spatial_decoder(h_hat)
-        return output.permute(0,2,1,3,4)  # (N, C, T, H, W) -> (N, T, C, H, W)
+        return output
     
     
 class Temporal_EncDec(nn.Module):
